@@ -26,11 +26,11 @@ class RNGCalc extends Component {
      return (
        <form onSubmit={this.handleSubmit}>
          <label>
-           Name: Outcome Probability
+           Outcome Probability
            <input type="number" value={this.state.outcomeProb} onChange={this.handleChange} />
          </label>
          <label>
-           Name: Number of Attempts
+          Number of Attempts
            <input type="number" value={this.state.numAttempts} onChange={this.handleChange} />
          </label>
          <input type="submit" value="Submit" />
