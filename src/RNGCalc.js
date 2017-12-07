@@ -14,11 +14,19 @@ class RNGCalc extends Component {
    }
 
    handleChange(event) {
-     this.setState({value: event.target.value});
+     const target = event.target;
+     const value = target.value;
+     const name = target.name;
+
+     this.setState({
+       [name]: value
+     });
    }
 
+
+
    handleSubmit(event) {
-     alert('A name was submitted: ' + this.state.value);
+     alert('Outcome Probability: ' + this.state.outcomeProb + ' Number of Attempts: ' + this.state.numAttempts);
      event.preventDefault();
    }
 
@@ -27,11 +35,11 @@ class RNGCalc extends Component {
        <form onSubmit={this.handleSubmit}>
          <label>
            Outcome Probability
-           <input type="number" value={this.state.outcomeProb} onChange={this.handleChange} />
+           <input name="outcomeProb" type="number" value={this.state.outcomeProb} onChange={this.handleChange} />
          </label>
          <label>
           Number of Attempts
-           <input type="number" value={this.state.numAttempts} onChange={this.handleChange} />
+           <input name="numAttempts" type="number" value={this.state.numAttempts} onChange={this.handleChange} />
          </label>
          <input type="submit" value="Submit" />
        </form>
