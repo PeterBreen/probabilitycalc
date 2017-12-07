@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import RNGCalc from './RNGCalc';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <p className="App-intro">
           For example, the probability of rolling a 3 on a 6-sided die is 16.67%. If you roll the die 25 times, the probability of rolling a 3 at least once is 98.95%.
         </p>
+        <RNGCalc />
       </div>
     )}
   };
