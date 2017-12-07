@@ -11,6 +11,7 @@ class RNGCalc extends Component {
      };
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
+     this.probabilityCalc = this.probabilityCalc.bind(this);
    }
 
    handleChange(event) {
@@ -23,10 +24,19 @@ class RNGCalc extends Component {
      });
    }
 
+   probabilityCalc(probability, attempts) {
+     // equation: 1 - ( ( 1 - x ) ^ y )
+     let pChance = probability / 100;
+     let odds = (1.00 - (Math.pow((1.00 - pChance), attempts))) * 100;
+     return odds.toFixed(5);
+   }
+
+
 
 
    handleSubmit(event) {
-     alert('Outcome Probability: ' + this.state.outcomeProb + ' Number of Attempts: ' + this.state.numAttempts);
+     const calcResult = this.probabilityCalc(this.state.outcomeProb, this.state.numAttempts);
+     alert('Outcome Probability: ' + this.state.outcomeProb + ' Number of Attempts: ' + this.state.numAttempts + ' results in a probability of: ' + calcResult);
      event.preventDefault();
    }
 
