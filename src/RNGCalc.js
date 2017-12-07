@@ -36,7 +36,7 @@ class RNGCalc extends Component {
 
    handleSubmit(event) {
      const calcResult = this.probabilityCalc(this.state.outcomeProb, this.state.numAttempts);
-     alert('Outcome Probability: ' + this.state.outcomeProb + ' Number of Attempts: ' + this.state.numAttempts + ' results in a probability of: ' + calcResult);
+     alert('Outcome Probability: ' + this.state.outcomeProb + '\nNumber of Attempts: ' + this.state.numAttempts + '\nResults in a probability of: ' + calcResult);
      event.preventDefault();
    }
 
@@ -51,7 +51,7 @@ class RNGCalc extends Component {
           Number of Attempts
            <input name="numAttempts" type="number" value={this.state.numAttempts} onChange={this.handleChange} />
          </label>
-         <input type="submit" value="Submit" />
+         <input type="submit" value="Calculate" />
        </form>
      );
    }
