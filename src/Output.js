@@ -15,7 +15,7 @@ class Output extends Component {
   render() {
     return (
       <div className="Output">
-      <p>With a chance of {this.props.probability}% and {this.props.attempts} attempts, your total odds of the event happening at least once are {this.props.calculated}%.</p>
+      <p>With a chance of <strong>{this.props.probability}%</strong> and <strong>{this.props.attempts}</strong> attempts, your total odds of the event happening at least once are <strong>{this.props.calculated}%</strong>.</p>
       </div>
     )}
   };
