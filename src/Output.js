@@ -3,14 +3,10 @@ import './Output.css';
 
 class Output extends Component {
 
-  constructor(props) {
-     super(props);
-     };
-
  shouldComponentUpdate(nextProps) {
     const differentCalculated = this.props.calculated !== nextProps.calculated;
     return differentCalculated
-}
+  }
 
   render() {
     return (

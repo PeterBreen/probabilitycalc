@@ -9,7 +9,8 @@ class RNGCalc extends Component {
      this.state = {
        outcomeProb: 0,
        numAttempts: 0,
-       calcVal: 0
+       calcVal: 0,
+       outputDisplay: false,
      };
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,7 +39,9 @@ class RNGCalc extends Component {
 
    handleSubmit(event) {
      const calcResult = this.probabilityCalc(this.state.outcomeProb, this.state.numAttempts);
-     this.setState({calcVal: calcResult});
+     this.setState({calcVal: calcResult,
+     outputDisplay: true
+    });
      event.preventDefault();
    }
 
@@ -56,7 +59,7 @@ class RNGCalc extends Component {
            </label>
            <input type="submit" value="Calculate" />
          </form>
-         <Output probability={this.state.outcomeProb} attempts={this.state.numAttempts} calculated={this.state.calcVal}/>
+         {this.state.outputDisplay && <Output probability={this.state.outcomeProb} attempts={this.state.numAttempts} calculated={this.state.calcVal} shouldDisplay={this.state.outputDisplay}/>}
        </div>
      );
    }
