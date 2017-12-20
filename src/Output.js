@@ -7,6 +7,11 @@ class Output extends Component {
      super(props);
      };
 
+ shouldComponentUpdate(nextProps) {
+    const differentCalculated = this.props.calculated !== nextProps.calculated;
+    return differentCalculated
+}
+
   render() {
     return (
       <div className="Output">
