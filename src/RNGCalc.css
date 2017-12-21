@@ -21,4 +21,5 @@ input[type=submit] {
 }
 .hint {
   color: #bbb;
+  padding-left: 0.5rem;
 }
