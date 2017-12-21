@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './RNGCalc.css';
-import Output from './Output'
 
 class RNGCalc extends Component {
 
@@ -8,9 +7,7 @@ class RNGCalc extends Component {
      super(props);
      this.state = {
        outcomeProb: 0,
-       numAttempts: 0,
-       calcVal: 0,
-       outputDisplay: false,
+       numAttempts: 0
      };
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,33 +31,25 @@ class RNGCalc extends Component {
      return odds.toFixed(5);
    }
 
-
-
-
    handleSubmit(event) {
      const calcResult = this.probabilityCalc(this.state.outcomeProb, this.state.numAttempts);
-     this.setState({calcVal: calcResult,
-     outputDisplay: true
-    });
+     alert('Outcome Probability: ' + this.state.outcomeProb + '% \nNumber of Attempts: ' + this.state.numAttempts + '\nResults in a probability of: ' + calcResult);
      event.preventDefault();
    }
 
    render() {
      return (
-       <div className="RNGCalc">
-         <form onSubmit={this.handleSubmit}>
-           <label>
-             Outcome Probability
-             <input id="outcomeProb" name="outcomeProb" type="number" value={this.state.outcomeProb} onChange={this.handleChange} />
-           </label>
-           <label>
-            Number of Attempts
-             <input name="numAttempts" type="number" value={this.state.numAttempts} onChange={this.handleChange} />
-           </label>
-           <input type="submit" value="Calculate" />
-         </form>
-         {this.state.outputDisplay && <Output probability={this.state.outcomeProb} attempts={this.state.numAttempts} calculated={this.state.calcVal} shouldDisplay={this.state.outputDisplay}/>}
-       </div>
+       <form onSubmit={this.handleSubmit}>
+         <label>
+           Outcome Probability <br />
+         <input id="outcomeProb" name="outcomeProb" type="number" value={this.state.outcomeProb} onChange={this.handleChange} /><span className="hint">%</span>
+         </label>
+         <label>
+          Number of Attempts <br />
+           <input name="numAttempts" type="number" value={this.state.numAttempts} onChange={this.handleChange} />
+         </label>
+         <input type="submit" value="Calculate" />
+       </form>
      );
    }
  };
