@@ -20,6 +20,7 @@ input[type=submit] {
   width: 3.5rem;
 }
 .hint {
+  font-size: 1rem;
   color: #bbb;
   padding-left: 0.5rem;
 }
