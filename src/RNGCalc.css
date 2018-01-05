@@ -6,11 +6,12 @@ label {
 }
 input {
 border-radius: 5px;
+font-size: 14px;
 }
 input[type=number] {
   display: inline-block;
   margin: 0.5rem 0 1rem 0;
-  height: 1.25rem;
+  height: 1.5rem;
   width: 10rem;
   border: 1px solid #000;
 }
