@@ -8,8 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <IntroText />
+        <IntroText section="probability" />
         <RNGCalc />
+        <IntroText section="determine" />
         <DetermineCalc />
       </div>
     )}
