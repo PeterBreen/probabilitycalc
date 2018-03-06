@@ -5,7 +5,7 @@ class DetermineCalc extends Component {
   render() {
     return (
       <div>
-        <p>DetermineCalc section rendering!</p>
+        <p className="determine-output">DetermineCalc section rendering!</p>
       </div>
     )}
   };

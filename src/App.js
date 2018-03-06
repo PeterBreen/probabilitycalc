@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import RNGCalc from './RNGCalc';
+import DetermineCalc from './DetermineCalc';
 import IntroText from './Intro';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <IntroText />
         <RNGCalc />
+        <DetermineCalc />
       </div>
     )}
   };
