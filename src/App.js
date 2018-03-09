@@ -8,10 +8,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <IntroText section="probability" />
-        <RNGCalc />
-        <IntroText section="determine" />
-        <DetermineCalc />
+        <div className="app-probability">
+          <IntroText section="probability" />
+          <RNGCalc />
+        </div>
+        <div className="app-determine">
+          <IntroText section="determine" />
+          <DetermineCalc />
+        </div>
       </div>
     )}
   };
