@@ -43,7 +43,7 @@ class DetermineCalc extends Component {
           </label>
           <input type="submit" value="Add to calculation" />
         </form>
-        <p>{this.state.fractionArray}</p>
+        <FractionOutput data={this.state.fractionArray}>
         <form onSubmit={this.displayResults}>
           <input type="submit" value="Determine probability" />
         </form>
