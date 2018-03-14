@@ -6,8 +6,8 @@ class DetermineCalc extends Component {
   constructor(props) {
      super(props);
      this.state = {
-       currentNumerator: 0,
-       currentDenominator: 0,
+       currentNumerator: 1,
+       currentDenominator: 1,
        fractionArray: []
      };
      this.handleChange = this.handleChange.bind(this);
@@ -30,7 +30,6 @@ class DetermineCalc extends Component {
      this.setState({
        fractionArray: numArray
      });
-    console.log(this.state.fractionArray);
     event.preventDefault();
    }
 
@@ -43,6 +42,9 @@ class DetermineCalc extends Component {
           <input id="numeratorInput" name="currentNumerator" type="number" value={this.state.currentNumerator} onChange={this.handleChange} /> / <input id="denominatorInput" name="currentDenominator" type="number" value={this.state.currentDenominator} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Add to calculation" />
+        </form>
+        <form onSubmit={this.displayResults}>
+          <input type="submit" value="Determine probability" />
         </form>
       </div>
     )}
