@@ -10,7 +10,7 @@ class FractionOutput extends Component {
   render() {
     const numbers = this.props.data;
     const listItems = numbers.map((number) =>
-    <li key={number.toString()}>{number}</li>
+    <li key={number.toString()}>{number[0]} / {number[1]}</li>
     );
 
     return (
@@ -24,5 +24,5 @@ class FractionOutput extends Component {
 
 export default FractionOutput;
 
-//iterate through the array so that at each key you display num / den, not just num den.
-//wrap each one in a div or something with a key that can go back to the array on submit and slice out an index
+//TODO: find a way so clicking each output has a key that can go back to the array on  and slice out an index
+// this might be helpful: https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318

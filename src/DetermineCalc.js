@@ -7,8 +7,8 @@ class DetermineCalc extends Component {
   constructor(props) {
      super(props);
      this.state = {
-       currentNumerator: 0,
-       currentDenominator: 0,
+       currentNumerator: 1,
+       currentDenominator: 1,
        fractionArray: []
      };
      this.handleChange = this.handleChange.bind(this);
