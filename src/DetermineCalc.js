@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './DetermineCalc.css';
+import FractionOutput from './FractionOutput';
 
 class DetermineCalc extends Component {
 
@@ -43,7 +44,7 @@ class DetermineCalc extends Component {
           </label>
           <input type="submit" value="Add to calculation" />
         </form>
-        <FractionOutput data={this.state.fractionArray}>
+        <FractionOutput data={this.state.fractionArray}/>
         <form onSubmit={this.displayResults}>
           <input type="submit" value="Determine probability" />
         </form>
