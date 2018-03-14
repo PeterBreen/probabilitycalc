@@ -35,6 +35,11 @@ class DetermineCalc extends Component {
     event.preventDefault();
    }
 
+  displayResults(event) {
+    console.log("yeah I bet you wish this did something. me too!");
+    event.preventDefault();
+  };
+
   render() {
     return (
       <div className="determine-output">
