@@ -1,3 +1,23 @@
 li {
 line-height: 1.25;
 }
+label {
+  display: block;
+}
+input {
+border-radius: 5px;
+font-size: 1rem;
+line-height: 1.5rem;
+}
+input[type=number] {
+  display: inline-block;
+  margin: 0.5rem 0 1rem 0;
+  width: 4rem;
+  border: 1px solid #000;
+}
+input[type=submit] {
+  background-color: #518812;
+  color: white;
+  width: 11rem;
+  padding: 0.25rem 1rem;
+}
