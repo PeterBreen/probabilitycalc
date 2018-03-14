@@ -2,5 +2,8 @@
   width: 4rem;
 }
 .determine-output input[type=submit] {
-  width: 11rem;
+  width: 12rem;
+}
+form:last-child {
+  margin-top: 1rem;
 }
