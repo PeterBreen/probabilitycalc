@@ -40,7 +40,7 @@ class DetermineCalc extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Input Odds <br />
-          <input id="numeratorInput" name="numeratorInput" type="number" value={this.state.currentNumerator} onChange={this.handleChange} /> / <input id="denominatorInput" name="denominatorInput" type="number" value={this.state.currentDenominator} onChange={this.handleChange} />
+          <input id="numeratorInput" name="currentNumerator" type="number" value={this.state.currentNumerator} onChange={this.handleChange} /> / <input id="denominatorInput" name="currentDenominator" type="number" value={this.state.currentDenominator} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Add to calculation" />
         </form>
