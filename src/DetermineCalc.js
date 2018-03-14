@@ -7,8 +7,8 @@ class DetermineCalc extends Component {
   constructor(props) {
      super(props);
      this.state = {
-       currentNumerator: 1,
-       currentDenominator: 1,
+       currentNumerator: 0,
+       currentDenominator: 0,
        fractionArray: []
      };
      this.handleChange = this.handleChange.bind(this);
@@ -27,10 +27,11 @@ class DetermineCalc extends Component {
 
    handleSubmit(event) {
      const numArray = this.state.fractionArray;
-     numArray.push([this.state.currentNumerator, this.state.currentDenominator])
+     numArray.push([parseInt(this.state.currentNumerator, 10), parseInt(this.state.currentDenominator, 10)])
      this.setState({
        fractionArray: numArray
      });
+    console.log(numArray);
     event.preventDefault();
    }
 
