@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import './FractionOutput.css';
 
 class FractionOutput extends Component {
-  constructor(props) {
-     super(props);
-  }
-
-
   render() {
     const numbers = this.props.data;
     const listItems = numbers.map((number) =>
