@@ -52,7 +52,7 @@ class DetermineCalc extends Component {
         </form>
         <FractionOutput data={this.state.fractionArray}/>
         <form onSubmit={this.displayResults}>
-          <input type="submit" value="Determine probability" />
+          {this.state.fractionArray.length > 0 && <input type="submit" value="Determine probability" />}
         </form>
       </div>
     )}
