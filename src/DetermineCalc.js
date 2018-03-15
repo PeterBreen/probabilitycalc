@@ -9,10 +9,12 @@ class DetermineCalc extends Component {
      this.state = {
        currentNumerator: 1,
        currentDenominator: 1,
-       fractionArray: []
+       fractionArray: [],
+       computedPercent: 0
      };
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
+     this.displayResults = this.displayResults.bind(this);
    }
 
    handleChange(event) {
@@ -34,10 +36,23 @@ class DetermineCalc extends Component {
     console.log(numArray);
     event.preventDefault();
    }
+    //must take nested array and number as inputs, e.g. [[1,2]], 0
+    sumArrayTotals(inputArray, indexVal) {
+      let totalNum = 1; //to avoid a divide by zero error
+      for (var i = 0; i < inputArray.length; i++) {
+        totalNum *= inputArray[i][indexVal];
+        console.log('totalNum ', totalNum);
+      }
+      return totalNum;
+    }
 
   displayResults(event) {
-    console.log("yeah I bet you wish this did something. me too!");
     event.preventDefault();
+    let output = (this.sumArrayTotals(this.state.fractionArray, 0) / this.sumArrayTotals(this.state.fractionArray, 1) * 100);
+    console.log(output);
+    this.setState({
+      computedPercent: output
+    });
   };
 
   render() {
@@ -54,6 +69,7 @@ class DetermineCalc extends Component {
         <form onSubmit={this.displayResults}>
           {this.state.fractionArray.length > 0 && <input type="submit" value="Determine probability" />}
         </form>
+        {this.state.computedPercent > 0 && <p>Based on the probabilities calculated, your overall odds are ~{this.state.computedPercent}%.</p>}
       </div>
     )}
   };
