@@ -8,6 +8,7 @@ class FractionOutput extends Component {
        keyValue: 0
      };
    }
+
   render() {
     let listId = 0;
     const numbers = this.props.data;
@@ -25,6 +26,3 @@ class FractionOutput extends Component {
   };
 
 export default FractionOutput;
-
-//TODO: find a way so clicking each output has a key that can go back to the array on  and slice out an index
-// this might be helpful: https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
