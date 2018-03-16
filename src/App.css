@@ -1,6 +1,11 @@
 .App {
   font-size: 16px;
   margin: 0 auto;
-  max-width: 30rem;
-  padding: 0.25rem 0.5rem;
+  max-width: 60rem;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-areas: "main main";
+}
+.app-determine, .app-probability {
+  padding: 0rem 2rem;
 }

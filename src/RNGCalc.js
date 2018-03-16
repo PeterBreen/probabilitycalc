@@ -31,9 +31,9 @@ class RNGCalc extends Component {
      // equation: 1 - ( ( 1 - x ) ^ y )
      let pChance = probability / 100;
      let odds = (1.00 - (Math.pow((1.00 - pChance), attempts))) * 100;
-     return odds.toFixed(5);
+     return odds.toFixed(3);
    }
-   
+
    handleSubmit(event) {
      const calcResult = this.probabilityCalc(this.state.outcomeProb, this.state.numAttempts);
      this.setState({calcVal: calcResult,
