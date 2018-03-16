@@ -49,7 +49,7 @@ class DetermineCalc extends Component {
   displayResults(event) {
     event.preventDefault();
     this.setState({
-      computedPercent: (this.sumArrayTotals(this.state.fractionArray, 0) / this.sumArrayTotals(this.state.fractionArray, 1) * 100)
+      computedPercent: (this.sumArrayTotals(this.state.fractionArray, 0) / this.sumArrayTotals(this.state.fractionArray, 1) * 100).toFixed(3)
     });
   };
 
