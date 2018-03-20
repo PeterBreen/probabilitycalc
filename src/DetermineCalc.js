@@ -33,7 +33,6 @@ class DetermineCalc extends Component {
      this.setState({
        fractionArray: numArray
      });
-    console.log(numArray);
     event.preventDefault();
    }
     //must take nested array and number as inputs, e.g. [[1,2]], 0
@@ -41,7 +40,6 @@ class DetermineCalc extends Component {
       let totalNum = 1; //to avoid a divide by zero error
       for (var i = 0; i < inputArray.length; i++) {
         totalNum *= inputArray[i][indexVal];
-        console.log('totalNum ', totalNum);
       }
       return totalNum;
     }

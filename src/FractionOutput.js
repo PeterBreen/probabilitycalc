@@ -7,13 +7,20 @@ class FractionOutput extends Component {
      this.state = {
        keyValue: 0
      };
+     this.handleRemove = this.handleRemove.bind(this);
    }
+
+
+  handleRemove(event) {
+   const target = event.target;
+   console.log(target);
+ }
 
   render() {
     let itemId = 0;
     const numbers = this.props.data;
     const listItems = numbers.map((number) =>
-    <div className="fraction-entry" key={itemId++}>{number[0]} <span className="fraction-line"></span> {number[1]}</div>
+    <div className="fraction-entry" key={itemId++} onClick={this.handleRemove}>{number[0]} <span className="fraction-line"></span> {number[1]}</div>
     );
 
     return (
