@@ -12,8 +12,9 @@ class FractionOutput extends Component {
 
 
   handleRemove(event) {
-   const target = event.target;
-   console.log(target);
+   const dataIndex = event.target.dataset.index
+   console.log(dataIndex);
+
  }
 
   render() {
