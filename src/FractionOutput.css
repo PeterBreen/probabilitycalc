@@ -1,0 +1,21 @@
+.fraction-output {
+  display: grid;
+  grid-template-rows: 1;
+  grid-column-gap: 0.5rem;
+}
+
+.fraction-entry {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  width: 2rem;
+  justify-self: center;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.fraction-line {
+display: block;
+border-top: 1px solid #000;
+margin: 0.25rem 0;
+width: 100%;
+}

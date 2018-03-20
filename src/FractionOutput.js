@@ -13,14 +13,12 @@ class FractionOutput extends Component {
     let listId = 0;
     const numbers = this.props.data;
     const listItems = numbers.map((number) =>
-    <li key={listId++}>{number[0]} / {number[1]}</li>
+    <div className="fraction-entry" key={listId++}>{number[0]} <span className="fraction-line"></span> {number[1]}</div>
     );
 
     return (
       <div className="fraction-output">
-        <ul>
           {listItems}
-        </ul>
       </div>
     )}
   };
