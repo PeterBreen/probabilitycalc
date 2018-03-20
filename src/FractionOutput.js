@@ -10,10 +10,10 @@ class FractionOutput extends Component {
    }
 
   render() {
-    let listId = 0;
+    let itemId = 0;
     const numbers = this.props.data;
     const listItems = numbers.map((number) =>
-    <div className="fraction-entry" key={listId++}>{number[0]} <span className="fraction-line"></span> {number[1]}</div>
+    <div className="fraction-entry" key={itemId++}>{number[0]} <span className="fraction-line"></span> {number[1]}</div>
     );
 
     return (
