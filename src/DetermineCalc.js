@@ -10,7 +10,9 @@ class DetermineCalc extends Component {
        currentNumerator: 1,
        currentDenominator: 1,
        fractionArray: [],
-       computedPercent: 0
+       computedPercent: 0,
+       displayNum: 0,
+       displayDem: 0,
      };
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
