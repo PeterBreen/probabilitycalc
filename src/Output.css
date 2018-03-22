@@ -5,3 +5,6 @@ p {
 .strong {
   font-weight: bold;
 }
+.output p {
+  margin-top: 0;
+}
