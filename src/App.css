@@ -3,8 +3,8 @@
   margin: 0 auto;
   max-width: 60rem;
   display: grid;
-  grid-template-columns: 2;
-  grid-template-areas: "main main";
+  grid-template-columns: 1;
+  grid-template-areas: "main";
 }
 .app-determine, .app-probability {
   padding: 0rem 2rem;
