@@ -49,6 +49,8 @@ class DetermineCalc extends Component {
   displayResults(event) {
     event.preventDefault();
     this.setState({
+      displayNum: this.sumArrayTotals(this.state.fractionArray, 0),
+      displayDem: this.sumArrayTotals(this.state.fractionArray, 1),
       computedPercent: (this.sumArrayTotals(this.state.fractionArray, 0) / this.sumArrayTotals(this.state.fractionArray, 1) * 100).toFixed(3)
     });
   };
@@ -67,7 +69,7 @@ class DetermineCalc extends Component {
         <form onSubmit={this.displayResults}>
           {this.state.fractionArray.length > 0 && <input type="submit" value="Determine probability" />}
         </form>
-        {this.state.computedPercent > 0 && <p>The outcome probability of these events is ~{this.state.computedPercent}%.</p>}
+        {this.state.computedPercent > 0 && <p>The outcome probability of these events is {this.state.displayNum}/{this.state.displayDem}, or ~{this.state.computedPercent}%.</p>}
       </div>
     )}
   };
