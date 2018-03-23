@@ -58,7 +58,8 @@ class DetermineCalc extends Component {
 
   handleRemove(event) {
     event.preventDefault();
-    console.log('handleRemove() run');
+    console.log(event.target);
+    //remove the e.target div from DOM after removing the fractionArray[x] values where x = the value of data-index.
   };
 
   render() {
