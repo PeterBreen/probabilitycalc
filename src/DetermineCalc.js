@@ -17,6 +17,7 @@ class DetermineCalc extends Component {
      this.handleChange = this.handleChange.bind(this);
      this.handleSubmit = this.handleSubmit.bind(this);
      this.displayResults = this.displayResults.bind(this);
+     this.handleRemove = this.handleRemove.bind(this);
    }
 
    handleChange(event) {
@@ -55,6 +56,11 @@ class DetermineCalc extends Component {
     });
   };
 
+  handleRemove(event) {
+    event.preventDefault();
+    console.log('handleRemove() run');
+  };
+
   render() {
     return (
       <div className="determine-output">
@@ -65,7 +71,7 @@ class DetermineCalc extends Component {
           </label>
           <input type="submit" value="Add to calculation" />
         </form>
-        <FractionOutput data={this.state.fractionArray}/>
+        <FractionOutput data={this.state.fractionArray} handler={this.handleRemove}/>
         <form onSubmit={this.displayResults}>
           {this.state.fractionArray.length > 0 && <input type="submit" value="Determine probability" />}
         </form>
