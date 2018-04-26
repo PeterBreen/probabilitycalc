@@ -4,7 +4,6 @@
   "homepage": "https://peterbreen.github.io/probabilitycalc",
   "private": true,
   "devDependencies": {
-    "hoek": "^5.0.3",
     "react-scripts": "1.0.17"
   },
   "dependencies": {
