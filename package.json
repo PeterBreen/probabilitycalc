@@ -4,10 +4,10 @@
   "homepage": "https://peterbreen.github.io/probabilitycalc",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "react-scripts": "^1.1.5"
   },
   "dependencies": {
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^2.0.0",
     "hoek": "^5.0.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
